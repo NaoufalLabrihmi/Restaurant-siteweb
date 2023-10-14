@@ -1,0 +1,640 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 200px;
+    background-color: #ffffff;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Add a cool hover effect to the navigation links */
+.navigation a {
+    margin-right: 20px;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navigation a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #000000; /* Color for the underline effect */
+    transform: scaleX(0); /* Initially, no width */
+    transform-origin: 50%;
+    transition: transform 0.3s;
+}
+
+.navigation a:hover {
+    color: #000000; /* Change text color on hover */
+}
+
+.navigation a:hover::before {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+
+
+.logo {
+    max-width: 150px; /* Adjust the maximum width to your preference */
+    height: auto;
+}
+.titre h5{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-
+}
+.titre p{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+
+/* Add media queries for responsive logo size adjustments */
+@media (max-width: 768px) {
+    .navbar-logo {
+        justify-content: center;
+    }
+
+    .logo {
+        max-width: 70px; /* Adjust the logo size for smaller screens */
+    }
+
+    .logo-black {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        max-width: 50px; /* Further adjust the logo size for even smaller screens */
+    }
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    background: url("img/wp9278305.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Make the navbar background transparent */
+}
+
+.main h2 {
+    text-decoration: none;
+    font: 1em sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.8em;
+    white-space: nowrap; 
+    font-weight: 600; 
+}
+
+.main-btn {
+    text-decoration: none;
+    font: 1em sans-serif;
+    color: white;
+    font-size: 1.0em;
+    font-size: 15px;
+    background-color: #000000;
+    display: inline-block;
+    padding: 1em;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: 600; 
+    cursor: pointer;
+}
+
+.img1 {
+    margin-left: 400px; /* Move the image to the right */
+
+}
+
+.about {
+    background-color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h3 {
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.circle {
+    display: inline-block;
+    width: 300px; /* Increase the width of the circles */
+    text-align: center;
+    margin: 20px; /* Increase the margin between the circles */
+}
+
+.circle img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.circle h4 {
+    font-size: 1.5em; /* Increase the font size for h4 */
+    margin-top: 20px; /* Add spacing between h4 and the image */
+}
+
+.circle p {
+    margin-top: 20px; /* Increase the margin between the text and the image */
+    font-size: 1.2em;
+}
+
+.partners {
+    background-color: #F3FFF1;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.partners-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    width: 150px; /* Set the size of the partner logos */
+    margin: 10px 25px; /* Adjust the margin to create more space between logos */
+}
+
+.feedback {
+    background-color: white; /* Change the background color to white */
+    padding: 50px 0 100px; /* Add more padding above the canvas */
+    text-align: center;
+}
+
+.feedback h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.feedback-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainD{
+    margin: 40px 60px 40px 60px;
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 20px); /* Each card occupies 33.33% of the container width */
+    width: 200px; /* Make the cards wider for a square-like appearance */
+    height: 200px; /* Set a specific height to match the width */
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px; /* Specific border radius */
+    padding: 20px;
+    text-align: center;
+    margin: 10px; /* Add margin to separate the cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    font-size: 1.2em;
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.card h4 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #F3FFF1;
+    color: #000; /* Change text color to black */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 100px; /* Adjust the maximum width of the logo */
+    display: block; /* Center the logo horizontally */
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-section {
+    border-top: 1px solid #000; /* Add a single horizontal line at the top of each column */
+    padding: 20px 0; /* Add padding to space out the content */
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #000; /* Text color for the links */
+    display: block;
+    margin-bottom: 10px; /* Space between the links */
+    font-size: 1.2em;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #000; /* Text color for social icons */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+.blog {
+    background-color: #f6f6f6;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog h3 {
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 140px;
+    color: #000000; 
+}
+
+.blog p {
+    font-size: 1.2em;
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    color: #545454; /* Adjust the text color */
+}
+
+.p1-olivier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-left: 350px; /* Adjust margins for better alignment */
+    margin-right: 350px;
+}
+
+.img2 {
+    width: 35%; /* Increase image width for a better visual impact */
+    margin: 20px 0;
+    border-radius: 20px;
+    margin-bottom: 45px;
+}
+
+.p2-olivier {
+    text-align: left;
+    margin-left: 200px; /* Adjust margins for better readability */
+    margin-right: 200px;
+    line-height: 1.6;
+    color: #3e3e3e; /* Adjust text color */
+}
+
+.img2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.p2-olivier a {
+    text-decoration: underline; /* Underline links for better visibility */
+    color: #4d88ff; /* Change link color */
+}
+
+.p2-olivier h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #3e3e3e;
+}
+
+.p2-olivier blockquote {
+    border-left: 4px solid #4d88ff;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.p2-olivier strong {
+    font-weight: 600;
+    color: #3e3e3e;
+}
+
+.p2-olivier code {
+    background-color: #f2f2f2;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.livre {
+    background-color: #f6f6f6;
+    padding: 20px;
+    text-align: center;
+}
+
+.livre h3 {
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 140px;
+    color: #000000;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjusted column size for consistent cards */
+    gap: 30px; /* Add gap between book cards */
+    justify-items: center;
+}
+
+
+
+.book-cover {
+    max-width: 30%;
+    border-radius: 5px;
+}
+
+.book-title {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.book-price {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #666;
+}
+
+.buy-button {
+    background-color: #557908;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.buy-button:hover {
+    background-color: #3e3e3e;
+}
+
+
+#menu .title {
+    margin-top: 140px;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#menu h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#menu {
+    background: #000000;
+    padding: 5rem 0;
+}
+
+#menu .title h2 {
+    color: #ffffff;
+}
+#menu .title p {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#menu .menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .menu-items .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+#menu .menu-items .menu-item img {
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+#menu .menu-items .menu-item h3 {
+    color: #ffffff;
+    border-bottom: 1px dashed #ffffff;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#menu .menu-items .menu-item span {
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+#menu .menu-items .menu-item p {
+    color: #ffffff;
+    margin-top: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+#menu .btn {
+    display: block;
+    margin: auto;
+    background: #ffffff;
+    color: #000000;
+}
+
+
+
+
+.cont{
+    min-height: 100vh;
+    background: #08071d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("img/adrien-olichon-ZgREXhl8ER0-unsplash.jpg") no-repeat center center/cover;
+}
+
+.cont form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.cont form h1{
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.cont form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+.cont form input::placeholder{
+    color: #ffffff;
+}
+
+.cont form #lastName,
+.cont form #mobile{
+    margin-left: 20px;
+}
+
+.cont form h4{
+    color: #ffffff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.cont form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgb(143, 115, 147);
+}
+
+.cont form #button{
+    border: none;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.cont form #button:hover{
+    opacity: 0.7;
+}
+/* Map styles */
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+
